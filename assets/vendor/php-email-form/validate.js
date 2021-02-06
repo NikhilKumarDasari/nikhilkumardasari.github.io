@@ -108,9 +108,10 @@
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
+    
 
-    if ( $(this).data('recaptcha-site-key') ) {
-      var recaptcha_site_key = $(this).data('recaptcha-site-key');
+    if ( $(this).data('6Lf-kkwaAAAAANzCeqeo1nuAiZRe1t6_gMwfZ8Dg') ) {
+      var recaptcha_site_key = $(this).data('6Lf-kkwaAAAAANzCeqeo1nuAiZRe1t6_gMwfZ8Dg');
       grecaptcha.ready(function() {
         grecaptcha.execute(recaptcha_site_key, {action: 'php_email_form_submit'}).then(function(token) {
           php_email_form_submit(this_form,action,this_form.serialize() + '&recaptcha-response=' + token);
